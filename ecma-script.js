@@ -56,7 +56,34 @@ console.log(max);
 const max1 = Math.max(...array1);
 console.log(max1);
 
+// const first = [1, 2, 3, 4, 5];
+// const second = first;
+// second.push(6);
+// console.log(first); why 6 is pushed in first? reference copy  
 
+const first = [1, 2, 3, 4, 5];
+const second = [...first];
+second.push(6);
+console.log(`This is first ${first}`);
+console.log(`This is second ${second}`);
+second.push(9);
+console.log(`Now second ${second}`);
 
+const value = [98, 12, 96];
+const prices = [56, 564, 5];
+
+const all = [...value,  999, ...prices];
+console.log(`This is from array all ${all}`);
+
+const person = {name : 'Sagor', age : 32};
+const employee = {profession : 'developer', ...person};
+
+console.log(employee); 
+
+const total = (a, b, c)=> a+b+c;
+const result = total(5, 10, 15);
+const digits = [20, 25, 30];
+total(...digits);
+  
 
 
