@@ -44,4 +44,9 @@ for(const key of keys){
     console.log(value);
 }
 
+let a = 12, b = 3;
+[a, b] = [b, a];
+
+console.log(`${a} and ${b}`);
+
 
